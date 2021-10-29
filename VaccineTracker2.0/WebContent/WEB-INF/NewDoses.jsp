@@ -9,6 +9,9 @@
 <title>New Vaccine Entry</title>
 </head>
 <body>
+	<div class="d-flex justify-content-center mt-1">
+		<h3>Enter New Doses</h3>
+	</div>
 	<form method="post">
 		<table class="table table-striped table-hover mt-3">
 			<tr>
@@ -24,8 +27,10 @@
 				<td>New Doses Received</td>
 				<td><input type="text" name="dosesReceived"></td>
 			</tr>
-			<tr colspan="2">
-				<td colspan="2"><button class="btn btn-primary">Add</button></td>
+			<tr>
+				<td></td>
+				<td><button class="btn btn-primary">Add</button></td>
+				<td></td>
 			</tr>
 		</table>
 	</form>

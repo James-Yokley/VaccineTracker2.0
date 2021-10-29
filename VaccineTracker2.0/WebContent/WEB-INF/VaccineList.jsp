@@ -9,10 +9,13 @@
 <title>Vaccine List</title>
 </head>
 <body>
+	<div class="d-flex justify-content-center mt-1">
+		<h2>Vaccine Tracker</h2>
+	</div>
 	<div class="d-flex justify-content-center mt-2">
-		<a href="NewVaccine" class="px-2 btn btn-primary">New Vaccine</a>
-		<a href="NewDoses" class="px-2 btn btn-primary">New Doses</a>
-		<br>
+		<a href="NewVaccine" class="btn btn-primary" role="button">New Vaccine</a>
+		
+		<a href="NewDoses" class="btn btn-primary" role="button">New Doses</a>
 	</div>
 	<table class="table table-striped table-hover mt-3">
 		<tr>
@@ -21,6 +24,7 @@
 			<th>Days Between Doses</th>
 			<th>Total Doses Received</th>
 			<th>Total Doses Left</th>
+			<th></th>
 		</tr>
 		<c:forEach items="${entries}" var="entry">
 			<tr>
