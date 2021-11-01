@@ -13,28 +13,24 @@
 		<h3>Enter a New Vaccine</h3>
 	</div>
 	<form method="post">
-		<table class="table table-striped table-hover mt-3">
-			<tr>
-				<td>Name</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-			<tr>
-				<td>Doses Required</td>
-				<td><select name="doseCount">
+		<div class="form-group">
+			<label for="nameInput">Name</label>
+			<input type="text" name="name" class="form-control" id="nameInput">
+		</div>
+		<div class="form-group">
+				<label for="requiredInput">Doses Required</label>
+				<select name="doseCount" class="form-control" id="requiredInput">
 				<option value=1>1</option>
 				<option value=2 selected>2</option>
 				</select>
-			</tr>
-			<tr>
-				<td>Days Between Doses</td>
-				<td><input type="text" name="dayCount"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><button class="btn btn-primary">Add</button></td>
-				<td></td>
-			</tr>
-		</table>
+		</div>		
+		<div class="form-group">		
+			<label for="daysInput">Days Between Doses</label>
+				<input type="text" name="dayCount" class="form-control" id="daysInput">
+		</div>		
+		<div class="form-group">
+				<button class="btn btn-primary">Add</button>
+		</div>		
 	</form>
 
 </body>

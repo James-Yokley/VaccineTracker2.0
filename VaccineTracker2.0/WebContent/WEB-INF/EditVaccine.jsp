@@ -10,35 +10,29 @@
 </head>
 <body>
 	<form method="post">
-		<table class="table table-striped table-hover mt-3">
-			<tr>
-				<td>Name</td>
-				<td><input type="text" name="name" value="${entry.getName()}">
-					<input type="hidden" name="id" value="${entry.id}">
-				</td>
-			</tr>
-			<tr>
-				<td>Doses Required</td>
-				<td><select name="doseCount">
-				<c:if test="${entry.getDoseCount() == 1}">
-					<option value=1 selected>1</option>
-					<option value=2>2</option>
-				</c:if>
-				<c:if test="${entry.getDoseCount() == 2}">
-					<option value=1>1</option>
-					<option value=2 selected>2</option>
-				</c:if>
-
-				</select>
-			</tr>
-			<tr>
-				<td>Days Between Doses</td>
-				<td><input type="text" name="dayCount" value="${entry.getDayCount()}"></td>
-			</tr>
-			<tr colspan="2">
-				<td colspan="2"><button class="btn btn-primary">Submit</button></td>
-			</tr>
-		</table>
+		<div class="form-group">
+			<label for="doseName">Name</label>
+			<input class="form-control" id="doseName" type="text" name="name" value="${entry.getName()}">
+			<input type="hidden" name="id" value="${entry.id}">
+		</div>		
+		<div class="form-group">	
+			<label for="dosesRequiredInput">Doses Required</label>
+			<select class="form-control" name="doseCount" id="dosesRequiredInput">
+			<c:if test="${entry.getDoseCount() == 1}">
+				<option value=1 selected>1</option>
+				<option value=2>2</option>
+			</c:if>
+			<c:if test="${entry.getDoseCount() == 2}">
+				<option value=1>1</option>
+				<option value=2 selected>2</option>
+			</c:if>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="dayCountInput">Days Between Doses</label>
+			<input type="text" class="form-control" id="dayCountInput" name="dayCount" value="${entry.getDayCount()}">
+			<button class="btn btn-primary">Submit</button>
+		</div>
 	</form>
 </body>
 </html>

@@ -13,26 +13,19 @@
 		<h3>Enter New Doses</h3>
 	</div>
 	<form method="post">
-		<table class="table table-striped table-hover mt-3">
-			<tr>
-				<td>Vaccine Name</td>
-				<td><select name="doseName">
-					<c:forEach items="${entries}" var="entry">
-						<option value="${entry.getName()}">${entry.getName()}</option>
-					</c:forEach>
-				
-				</select></td>
-			</tr>
-			<tr>
-				<td>New Doses Received</td>
-				<td><input type="text" name="dosesReceived"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><button class="btn btn-primary">Add</button></td>
-				<td></td>
-			</tr>
-		</table>
+		<div class="form-group">
+			<label for="doseNameInput">Vaccine Name</label>
+			<select name="doseName" class="form-control" id="doseNameInput">
+				<c:forEach items="${entries}" var="entry">
+					<option value="${entry.getName()}">${entry.getName()}</option>
+				</c:forEach>	
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="newDosesInput">New Doses Received</label>
+			<input type="text" name="dosesReceived" class="form-control" id="newDosesInput">
+			<button class="btn btn-primary">Add</button>
+		</div>
 	</form>
 
 </body>
