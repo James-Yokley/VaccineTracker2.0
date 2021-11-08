@@ -9,6 +9,9 @@
 <title>Vaccine List</title>
 </head>
 <body>
+	<div class="d-flex justify-content-left mt-1">
+		<a href="FrontPage" class="btn btn-secondary" role="button">Home</a>
+	</div>
 	<div class="d-flex justify-content-center mt-1">
 		<h2>Vaccine Tracker</h2>
 	</div>

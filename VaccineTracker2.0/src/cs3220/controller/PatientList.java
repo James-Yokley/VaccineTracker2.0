@@ -11,24 +11,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+import cs3220.model.Patient;
 import cs3220.model.VaccineListEntry;
 
 
-@WebServlet("/VaccineList")
-public class VaccineList extends HttpServlet {
+@WebServlet("/PatientList")
+public class PatientList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     
-    public VaccineList() {
+    public PatientList() {
         super();
         
     }
 
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<VaccineListEntry> entries = (List<VaccineListEntry>) getServletContext().getAttribute("entries"); 
+		List<VaccineListEntry> entries = (List<VaccineListEntry>) getServletContext().getAttribute("entries");
+		List<Patient> patients = (List<Patient>) getServletContext().getAttribute("patients"); 
 		request.setAttribute("entries", entries);
-		request.getRequestDispatcher("/WEB-INF/VaccineList.jsp").forward(request, response);
+		request.setAttribute("patients", patients);
+		
+		request.getRequestDispatcher("/WEB-INF/PatientList.jsp").forward(request, response);
 	}
 
 
